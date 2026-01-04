@@ -122,3 +122,24 @@ input {
     --orange: orange;
     --black: black;
 }
+
+.modal {
+    width: 500px;
+    height: 300px;
+    margin-top: 300px;
+    margin-left: 500px;
+    display: none;
+    background-color: #F79300;
+    border-radius: 15px;
+}
+.close {
+    width: 50px;
+    height: 30px;
+    font-size: 25px;
+    margin-left: 450px;
+    border-radius: 10px;
+    border: none;
+}
+.modal.show {
+  display: block;
+}
