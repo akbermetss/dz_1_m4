@@ -82,18 +82,22 @@ prev.onclick = () => {
     startAutoSlider()
 }
 
+
 const modal = document.getElementById('modal');
 const closeBtn = modal.querySelector('.close');
 
 function openModal() {
   modal.classList.add('show');
+  document.body.style.overflow = 'hidden'; 
 }
 
 function closeModal() {
   modal.classList.remove('show');
+  document.body.style.overflow = ''; 
 }
 
 closeBtn.addEventListener('click', closeModal);
+
 
 function onScroll() {
   const scrollTop = window.pageYOffset;
@@ -102,7 +106,7 @@ function onScroll() {
 
   if (scrollTop + windowHeight >= documentHeight) {
     openModal();
-    window.removeEventListener('scroll', onScroll); // 🔥 важно
+    window.removeEventListener('scroll', onScroll); 
   }
 }
 
